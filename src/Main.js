@@ -19,8 +19,8 @@ class Main extends Component {
         redirect_uri: 'http://mwilkens731.github.io/jps/auth',
         response_type: 'code'
       }));
-      this.props.history.push(this.state.oauth.getAuthorizeUrl({
-        redirect_uri: 'http://mwilkens731.github.io/jps/auth',
+      window.location.assign(this.state.oauth.getAuthorizeUrl({
+        redirect_uri: 'https://mwilkens731.github.io/jps/auth',
         response_type: 'code'
       }));
       // let result = await this.state.oauth.getOAuthAccessToken('', {'grant_type': 'refresh_token'}, (res) => {
