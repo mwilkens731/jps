@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from './Main';
-import {Auth} from './Auth';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
