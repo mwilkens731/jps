@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './App.css';
 import AppData from './AppData';
 import { withRouter } from 'react-router';
+import queryString from 'query-string';
 var OAuth = require('oauth');
 
 class Main extends Component {
@@ -13,16 +14,20 @@ class Main extends Component {
     };
   }
 
-  async componentDidMount (prevProps) {
-    if (!this.state.token) {
+  async componentDidMount (props) {
+    let code = (queryString.parse(this.props.location.search)).code;
+    if (!code) {
       console.log('in', this.state.oauth.getAuthorizeUrl({
-        redirect_uri: 'http://mwilkens731.github.io/jps/auth',
+        redirect_uri: 'http://mwilkens731.github.io/jps/',
         response_type: 'code'
       }));
       window.location.assign(this.state.oauth.getAuthorizeUrl({
-        redirect_uri: 'https://mwilkens731.github.io/jps/auth',
+        redirect_uri: 'https://mwilkens731.github.io/jps/',
         response_type: 'code'
       }));
+    } else {
+      console.log('in else');
+      console.log(code);
     }
   }
 
