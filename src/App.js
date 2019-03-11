@@ -4,11 +4,11 @@ import Main from './Main';
 
 class App extends Component {
 
-
-  render() {
+  render () {
     return (
-      <div className="App">
-        <Main/>
+      <div className='App'>
+        <div>test</div>
+        <Main />
       </div>
     );
   }
