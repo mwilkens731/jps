@@ -4,6 +4,7 @@ import './App.css';
 import AppData from './AppData';
 import { withRouter } from 'react-router';
 import queryString from 'query-string';
+import axios from 'axios';
 var OAuth = require('oauth');
 
 class Main extends Component {
@@ -15,7 +16,7 @@ class Main extends Component {
     this.saveLoginResults = this.saveLoginResults.bind(this);
   }
 
-  componentDidMount (props) {
+  async componentDidMount (props) {
     let code = (queryString.parse(this.props.location.search)).code;
     if (!code && !this.state.code) {
       window.location.assign(this.state.oauth.getAuthorizeUrl({
@@ -23,10 +24,18 @@ class Main extends Component {
         response_type: 'code'
       }));
     } else {
-      this.state.oauth.getOAuthAccessToken(code, {
+      let results = await axios.post('https://api.login.yahoo.com/oauth2/get_token', {}, {
+        client_id: AppData.clientId,
+        client_seciret: AppData.clientSecret,
         grant_type: 'authorization_code',
+        code: code,
         redirect_uri: 'https://mwilkens731.github.io/jps'
-      }, this.saveLoginResults);
+      });
+      console.log('results', results);
+      // this.state.oauth.getOAuthAccessToken(code, {
+      //   grant_type: 'authorization_code',
+      //   redirect_uri: 'https://mwilkens731.github.io/jps'
+      // }, this.saveLoginResults);
     }
   }
 
