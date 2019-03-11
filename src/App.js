@@ -11,9 +11,8 @@ class App extends Component {
       <div className='App'>
         <BrowserRouter>
           <Switch>
+            <Route path='/auth' component={Auth} />
             <Route path='/' component={Main} />
-            <Route path='/jps' component={Main} />
-            <Route path='/jps/auth' component={Auth} />
           </Switch>
         </BrowserRouter>
       </div>

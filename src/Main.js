@@ -23,14 +23,6 @@ class Main extends Component {
         redirect_uri: 'https://mwilkens731.github.io/jps/auth',
         response_type: 'code'
       }));
-      // let result = await this.state.oauth.getOAuthAccessToken('', {'grant_type': 'refresh_token'}, (res) => {
-      //   console.log('res', res);
-      // });
-      // console.log('results', result);
-    }
-    if (!this.state.gameKey) {
-      // this.setState({gameKey: gameKeyResponse.gameKey});
-      console.log('hi', this.state);
     }
   }
 
