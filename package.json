@@ -5,10 +5,13 @@
   "homepage": "https://mwilkens731.github.io/jps",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "oauth": "^0.9.15",
+    "prop-types": "15.6.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8",
-    "yahoo-fantasy": "^3.1.1"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
