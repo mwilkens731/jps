@@ -25,11 +25,14 @@ class Main extends Component {
       }));
     } else {
       let results = await axios.post('https://api.login.yahoo.com/oauth2/get_token', {}, {
-        client_id: AppData.clientId,
-        client_seciret: AppData.clientSecret,
-        grant_type: 'authorization_code',
-        code: code,
-        redirect_uri: 'https://mwilkens731.github.io/jps'
+        headers: {
+          client_id: AppData.clientId,
+          client_seciret: AppData.clientSecret,
+          grant_type: 'authorization_code',
+          code: code,
+          redirect_uri: 'https://mwilkens731.github.io/jps'
+        },
+        crossDomain: true
       });
       console.log('results', results);
       // this.state.oauth.getOAuthAccessToken(code, {
