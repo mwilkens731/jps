@@ -4,14 +4,14 @@ import './App.css';
 import AppData from './AppData';
 import { withRouter } from 'react-router';
 import queryString from 'query-string';
-import axios from 'axios';
 var OAuth = require('oauth');
 
 class Main extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      oauth: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token')
+      oauth: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token'),
+      oauthWithProxy: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, AppData.corsAnywhereUrl + 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token')
     };
     this.saveLoginResults = this.saveLoginResults.bind(this);
   }
@@ -24,21 +24,10 @@ class Main extends Component {
         response_type: 'code'
       }));
     } else {
-      let results = await axios.post('https://api.login.yahoo.com/oauth2/get_token', {}, {
-        headers: {
-          client_id: AppData.clientId,
-          client_seciret: AppData.clientSecret,
-          grant_type: 'authorization_code',
-          code: code,
-          redirect_uri: 'https://mwilkens731.github.io/jps'
-        },
-        crossDomain: true
-      });
-      console.log('results', results);
-      // this.state.oauth.getOAuthAccessToken(code, {
-      //   grant_type: 'authorization_code',
-      //   redirect_uri: 'https://mwilkens731.github.io/jps'
-      // }, this.saveLoginResults);
+      this.state.oauthWithProxy.getOAuthAccessToken(code, {
+        grant_type: 'authorization_code',
+        redirect_uri: 'https://mwilkens731.github.io/jps'
+      }, this.saveLoginResults);
     }
   }
 

@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://mwilkens731.github.io/jps",
   "dependencies": {
-    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "oauth": "^0.9.15",
     "prop-types": "15.6.2",
