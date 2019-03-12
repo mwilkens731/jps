@@ -13,7 +13,9 @@ class Main extends Component {
       oauth: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token'),
       oauthWithProxy: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, AppData.corsAnywhereUrl + 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token')
     };
+    this.state.oauthWithProxy.useAuthorizationHeaderforGET(true);
     this.saveLoginResults = this.saveLoginResults.bind(this);
+    this.saveTeams = this.saveTeams.bind(this);
   }
 
   async componentDidMount (props) {
@@ -31,24 +33,32 @@ class Main extends Component {
     }
   }
 
-  saveLoginResults (e, code, access_token, refresh_token) {
+  async saveLoginResults (e, code, access_token, refresh_token) {
     if (e) {
       console.log(e);
     } else {
       console.log('success!');
       console.log('access', access_token);
       console.log('refresh', refresh_token);
+      let result = await this.state.oauthWithProxy.get(AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/league/' + AppData.leagueKey + '/teams?format=json', refresh_token.access_token, this.saveTeams);
+      console.log('save result', result);
     }
     this.setState({
       code: code,
-      accessToken: access_token,
-      refreshToken: refresh_token
+      accessToken: refresh_token.access_token
     });
+  }
+
+  saveTeams(response){
+    console.log('response', response);
   }
 
   render () {
     return (
-      <div>Hi</div>
+      <div>
+        <div>Hi</div>
+        <div>{this.state.accessToken}</div>
+      </div>
     );
   }
 }
