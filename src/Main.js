@@ -6,6 +6,7 @@ import Keepers from './Keepers';
 import { withRouter } from 'react-router';
 import queryString from 'query-string';
 import axios from 'axios';
+import TeamArea from './TeamArea';
 var OAuth = require('oauth');
 
 class Main extends Component {
@@ -18,9 +19,9 @@ class Main extends Component {
       authenticated: false,
       teamsRetrieved: false,
       draftResultsRetrieved: false,
-      rostersRetrieved: 0,
-      rosterEnhancementStatus: 0,
-      freeAgentEnhancementStatus: 0,
+      rostersRetrieved: false,
+      rosterEnhancementStatus: false,
+      freeAgentEnhancementStatus: false,
       isLocalHost: window.location.host.indexOf('localhost') === 0,
       teams: [],
       freeAgents: []
@@ -120,7 +121,6 @@ class Main extends Component {
         playerKey: extractedResults[i].draft_result.player_key
       });
     }
-    console.log('draft results', draftResults);
     this.setState({
       draftResultsRetrieved: true,
       draftResults: draftResults
@@ -136,27 +136,74 @@ class Main extends Component {
         commaSeparatedTeamKeys += ',' + (this.state.predraft ? team.lastYearTeamKey : team.teamKey);
       }
     });
-    console.log('temas in ', teams);
-
     let result = await axios.get(
       AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=' + commaSeparatedTeamKeys + '/roster?format=json',
       this.getAxiosHeaders(this.state.accessToken));
-    console.log('teams reulsts', result);
     for (let i = 0; i < teams.length; i++) {
-    // teams.forEach((team) => {
-      // let result = await axios.get(
-      //   AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/team/' + (this.state.predraft ? team.lastYearTeamKey : team.teamKey) + '/roster?format=json',
-      //   this.getAxiosHeaders(this.state.accessToken));
       let thisRoster = result.data.fantasy_content.teams[i].team[1].roster[0].players;
       for (let j = 0; j < thisRoster.count; j++) {
         teams[i].roster.push(this.transformPlayer(thisRoster[j].player[0]));
       }
-      this.setState({
-        rostersRetrieved: this.state.rostersRetrieved + 1,
-        teams: [...this.state.teams, teams[i]]
-      });
-    // });
     }
+    this.setState({
+      rostersRetrieved: true,
+      teams: teams
+    });
+    this.populateKeeperData();
+  }
+
+  populateKeeperData () {
+    let keepers = 0;
+    this.state.teams.forEach((thisTeam) => {
+      thisTeam.roster.forEach((player) => {
+        if (this.enhancePlayer(player)) {
+          keepers++;
+        }
+      });
+    });
+    this.setState({
+      rosterEnhancementStatus: true
+    });
+    console.log('keepers on rosters: ', keepers);
+    this.populateFreeAgents();
+  }
+
+  async populateFreeAgents () {
+    let freeAgents = this.state.draftResults.filter(pick => !pick.name);
+    let faBatches = [];
+    let fasAddedToRequest = 0;
+    while (fasAddedToRequest < freeAgents.length) {
+      let commaSeparatedPlayersKeys = '';
+      for (let i = 0; i < 25 && fasAddedToRequest < freeAgents.length; i++) {
+        if (commaSeparatedPlayersKeys.length === 0) {
+          commaSeparatedPlayersKeys = freeAgents[fasAddedToRequest].playerKey;
+        } else {
+          commaSeparatedPlayersKeys += ',' + freeAgents[fasAddedToRequest].playerKey;
+        }
+        fasAddedToRequest++;
+      }
+      faBatches.push(commaSeparatedPlayersKeys);
+    }
+    let processedFAs = [];
+    let keepers = 0;
+    for (let j = 0; j < faBatches.length; j++) {
+      let results = await axios.get(
+        AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/players;player_keys=' + faBatches[j] + '?format=json',
+        this.getAxiosHeaders(this.state.accessToken));
+      let freeAgentsFromService = results.data.fantasy_content.players;
+      for (let i = 0; i < freeAgentsFromService.count; i++) {
+        let player = this.transformPlayer(freeAgentsFromService[i].player[0]);
+        if (this.enhancePlayer(player)) {
+          keepers++;
+        }
+        processedFAs.push(player);
+      }
+    }
+    console.log('FA keepers', keepers);
+    this.setState({
+      freeAgentEnhancementStatus: true,
+      freeAgents: processedFAs
+    });
   }
 
   transformPlayer (thisPlayer) {
@@ -172,48 +219,6 @@ class Main extends Component {
       name: thisPlayer[2].name.ascii_first + ' ' + thisPlayer[2].name.ascii_last,
       position: thisPlayer[displayPostionIndex].display_position
     };
-  }
-
-  populateKeeperData () {
-    this.setState({
-      rosterEnhancementStatus: 1
-    });
-    let keepers = 0;
-    this.state.teams.forEach((thisTeam) => {
-      thisTeam.roster.forEach((player) => {
-        if (this.enhancePlayer(player)) {
-          keepers++;
-        }
-      });
-    });
-    this.setState({
-      rosterEnhancementStatus: 2
-    });
-    console.log('populated data', this.state.teams);
-    console.log('keepers on rosters: ', keepers);
-  }
-
-  async populateFreeAgents () {
-    this.setState({
-      freeAgentEnhancementStatus: 1
-    });
-    let keepers = 0;
-    console.log('draft results in populate', this.state.draftResults);
-    let freeAgents = this.state.draftResults.filter(pick => !pick.name);
-    console.log('free agents to populate: ', freeAgents.length);
-    let commaSeparatedPlayersKeys = '';
-    freeAgents.forEach((thisFA) => {
-      if (commaSeparatedPlayersKeys.length === 0) {
-        commaSeparatedPlayersKeys = thisFA.playerKey;
-      } else {
-        commaSeparatedPlayersKeys += ',' + thisFA.playerKey;
-      }
-    });
-    let results = await axios.get(
-      AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/players;player_keys=' + commaSeparatedPlayersKeys + '?format=json',
-      this.getAxiosHeaders(this.state.accessToken));
-    console.log('results', results);
-    console.log('comma', commaSeparatedPlayersKeys);
   }
 
   enhancePlayer (player) {
@@ -237,21 +242,19 @@ class Main extends Component {
 
   getLoadingStatus () {
     if (!this.state.authenticated) {
-      return 'Authenticating';
+      return 'Authenticating...';
     } else if (!this.state.teamsRetrieved) {
       return 'Retrieving Team List...';
     } else if (!this.state.draftResultsRetrieved) {
-      return 'Retrieving Draft Results...';
-    } else if (this.state.rostersRetrieved < 12) {
-      return `Retrieving Roster (${this.state.rostersRetrieved} / 12)`;
-    } else if (this.state.rosterEnhancementStatus !== 2) {
-      if (!this.state.rosterEnhancementStatus) {
-        this.populateKeeperData();
-      }
+      return 'Retrieving Draft Result...';
+    } else if (!this.state.rostersRetrieved) {
+      return `Retrieving Rosters...`;
+    } else if (!this.state.rosterEnhancementStatus) {
       return 'Populating Keeper Data...';
     } else if (!this.state.freeAgentEnhancementStatus) {
-      this.populateFreeAgents();
+      return 'Importing Free Agents...';
     }
+    console.log('state at end of imports', this.state);
     return 'Done';
   }
 
@@ -274,11 +277,11 @@ class Main extends Component {
         }
         {this.getLoadingStatus() === 'Done' &&
           <div className='row'>
-            <div className='col-12 col-m-6'>
-              Hi 1
+            <div className='col-12 col-md-6'>
+              <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
             </div>
-            <div className='col-12 col-m-6'>
-              Hi 2
+            <div className='col-12 col-md-6'>
+              <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
             </div>
             {this.state.accessToken}
           </div>
