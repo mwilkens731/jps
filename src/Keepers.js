@@ -181,7 +181,7 @@ export default [
   },
   {
     name: 'Zack Godley',
-    cost: 17,
+    cost: 24,
     year: 2
   },
   {
