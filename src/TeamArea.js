@@ -83,7 +83,20 @@ class TeamArea extends Component {
       <div className='container-fluid'>
         <ReactSelect options={this.state.dropdownOptions} selected={this.state.selected} onChange={this.handleChange} placeholder={'Select Team To View...'} className='col-6 offset-3 pb-3'/>
         {this.state.selected !== '' &&
-          <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={30} />
+          <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={30}
+            getTrProps={(state, rowInfo, column) => {
+              if(rowInfo){
+              return {
+                style: {
+                  'fontWeight': rowInfo.row.year === 3 ? 'bold' : 'normal',
+                   'color': rowInfo.row.year === 3 ? 'red' : 'black'
+                }
+              };
+            }
+            else{
+              return {style: {}};
+            }
+          }} />
         }
       </div>
     );
