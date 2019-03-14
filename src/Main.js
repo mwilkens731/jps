@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './App.css';
 import AppData from './AppData';
 import Keepers from './Keepers';
+import NextYearKeepers from './NextYearKeepers';
 import { withRouter } from 'react-router';
 import queryString from 'query-string';
 import axios from 'axios';
@@ -39,6 +40,7 @@ class Main extends Component {
     this.transformPlayer = this.transformPlayer.bind(this);
     this.enhancePlayer = this.enhancePlayer.bind(this);
     console.log('keepers in file: ' + Keepers.length);
+    console.log('next year keepers in file: ' + NextYearKeepers.length);
   }
 
   async componentDidMount (props) {
@@ -154,10 +156,14 @@ class Main extends Component {
 
   populateKeeperData () {
     let keepers = 0;
+    let nextYearKeepers = 0;
     this.state.teams.forEach((thisTeam) => {
       thisTeam.roster.forEach((player) => {
         if (this.enhancePlayer(player)) {
           keepers++;
+        }
+        if (player.nextYearKeeper) {
+          nextYearKeepers++;
         }
       });
     });
@@ -165,6 +171,7 @@ class Main extends Component {
       rosterEnhancementStatus: true
     });
     console.log('keepers on rosters: ', keepers);
+    console.log('next year keepers on rosters', nextYearKeepers);
     this.populateFreeAgents();
   }
 
@@ -230,6 +237,7 @@ class Main extends Component {
       draftRound = draftResult.round;
     }
     let keeper = Keepers.find(k => k.name === player.name);
+    player.nextYearKeeper = !!NextYearKeepers.find(k => k.name === player.name);
     if (keeper) {
       player.cost = keeper.cost;
       player.year = keeper.year;

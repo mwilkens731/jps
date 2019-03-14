@@ -39,13 +39,13 @@ const keeperColumns = [
   }
 ];
 
-const caseInsensitiveFilter = function(filter, row){
+const caseInsensitiveFilter = function (filter, row) {
   let rowValue = row[filter.id];
-  if(rowValue){
+  if (rowValue) {
     return rowValue.toLowerCase().includes(filter.value.toLowerCase());
   }
   return false;
-}
+};
 
 class TeamArea extends Component {
   constructor (props) {
@@ -61,7 +61,7 @@ class TeamArea extends Component {
 
   deriveOptions () {
     let options = [];
-    for(let i = 0; i < this.props.teams.length; i++){
+    for (let i = 0; i < this.props.teams.length; i++) {
       let newOption = {};
       newOption.value = i;
       newOption.label = this.props.teams[i].name;
@@ -81,22 +81,38 @@ class TeamArea extends Component {
   render () {
     return (
       <div className='container-fluid'>
-        <ReactSelect options={this.state.dropdownOptions} selected={this.state.selected} onChange={this.handleChange} placeholder={'Select Team To View...'} className='col-6 offset-3 pb-3'/>
+        <div className='row'>
+          <ReactSelect options={this.state.dropdownOptions} selected={this.state.selected} onChange={this.handleChange} placeholder={'Select Team To View...'} className='col-6 offset-3' />
+        </div>
+        <div className='row pb-3'>
+          {this.state.selected.label !== 'Free Agents' &&
+            <div className='col-6 offset-3 text-left'>
+              <span className='text-danger float-left'><strong>*year 3</strong></span>
+              {this.props.predraft &&
+                <span className='text-primary float-right'><strong>*selected keepers</strong></span>
+              }
+            </div>
+          }
+          {this.state.selected.label === 'Free Agents' &&
+            <div className='col-12'>
+              <span className='font-italic'>**players not on this list or on a team cost a round 25 pick, and are year 1</span>
+            </div>
+          }
+        </div>
         {this.state.selected !== '' &&
           <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={30}
             getTrProps={(state, rowInfo, column) => {
-              if(rowInfo){
-              return {
-                style: {
-                  'fontWeight': rowInfo.row.year === 3 ? 'bold' : 'normal',
-                   'color': rowInfo.row.year === 3 ? 'red' : 'black'
-                }
-              };
-            }
-            else{
-              return {style: {}};
-            }
-          }} />
+              if (rowInfo) {
+                return {
+                  style: {
+                    'fontWeight': rowInfo.row.year === 3 || (this.props.predraft && rowInfo.row._original.nextYearKeeper) ? 'bold' : 'normal',
+                    'color': rowInfo.row.year === 3 ? 'red' : (this.props.predraft && rowInfo.row._original.nextYearKeeper) ? 'blue' : 'black'
+                  }
+                };
+              } else {
+                return {style: {}};
+              }
+            }} />
         }
       </div>
     );
