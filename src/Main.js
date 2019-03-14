@@ -283,7 +283,6 @@ class Main extends Component {
             <div className='col-12 col-md-6'>
               <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
             </div>
-            {this.state.accessToken}
           </div>
         }
       </div>
