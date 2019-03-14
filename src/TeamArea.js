@@ -76,13 +76,12 @@ class TeamArea extends Component {
       selected: e,
       tableData: e.value === this.props.teams.length ? this.props.freeAgents : this.props.teams[e.value].roster
     });
-    console.log('selected data', e.value === this.props.teams.length ? this.props.freeAgents : this.props.teams[e.value].roster);
   }
 
   render () {
     return (
       <div className='container-fluid'>
-        <ReactSelect options={this.state.dropdownOptions} selected={this.state.selected} onChange={this.handleChange} />
+        <ReactSelect options={this.state.dropdownOptions} selected={this.state.selected} onChange={this.handleChange} placeholder={'Select Team To View...'} className='col-6 offset-3 pb-3'/>
         {this.state.selected !== '' &&
           <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={30} />
         }

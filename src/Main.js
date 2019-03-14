@@ -278,9 +278,11 @@ class Main extends Component {
         {this.getLoadingStatus() === 'Done' &&
           <div className='row'>
             <div className='col-12 col-md-6'>
+              <h5>Select Team</h5>
               <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
             </div>
             <div className='col-12 col-md-6'>
+              <h5>Select Team</h5>
               <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
             </div>
           </div>
