@@ -8,6 +8,7 @@ import { withRouter } from 'react-router';
 import queryString from 'query-string';
 import axios from 'axios';
 import TeamArea from './TeamArea';
+import moment from 'moment';
 var OAuth = require('oauth');
 
 class Main extends Component {
@@ -139,7 +140,7 @@ class Main extends Component {
       }
     });
     let result = await axios.get(
-      AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=' + commaSeparatedTeamKeys + '/roster?format=json',
+      AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=' + commaSeparatedTeamKeys + '/roster' + (this.state.predraft ? '' : (';date=' + moment().day(8).format('YYYY-MM-DD').toString())) + '?format=json',
       this.getAxiosHeaders(this.state.accessToken));
     for (let i = 0; i < teams.length; i++) {
       let thisRoster = result.data.fantasy_content.teams[i].team[1].roster[0].players;
