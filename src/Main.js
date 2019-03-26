@@ -219,7 +219,6 @@ class Main extends Component {
     if (!thisPlayer[8].display_position) {
       displayPostionIndex++;
       if (!thisPlayer[9].display_position) {
-        console.log('undefined player position for ', thisPlayer);
         displayPostionIndex++;
         if (!thisPlayer[10].display_position) {
           console.log('undefined player position for ', thisPlayer);
