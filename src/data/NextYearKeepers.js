@@ -328,6 +328,41 @@ export default [
     name: 'Dakota Hudson',
     cost: 25,
     year: 1
+  },
+  {
+    name: 'Gavin Lux',
+    cost: 25,
+    year: 1
+  },
+  {
+    name: 'Gleyber Torres',
+    cost: 16,
+    year: 2
+  },
+  {
+    name: 'Jesus Luzardo',
+    cost: 17,
+    year: 1
+  },
+  {
+    name: 'Fernando Tatis Jr.',
+    cost: 25,
+    year: 1
+  },
+  {
+    name: 'Michael Kopech',
+    cost: 25,
+    year: 1
+  },
+  {
+    name: 'Dinelson Lamet',
+    cost: 25,
+    year: 1
+  },
+  {
+    name: 'Salvador Perez',
+    cost: 24,
+    year: 1
   }
 
 ];
