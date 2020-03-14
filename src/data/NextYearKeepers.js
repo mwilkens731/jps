@@ -363,6 +363,26 @@ export default [
     name: 'Salvador Perez',
     cost: 24,
     year: 1
+  },
+  {
+    name: 'Stephen Strasburg',
+    cost: 3,
+    year: 1
+  },
+  {
+    name: 'Charlie Morton',
+    cost: 12,
+    year: 1
+  },
+  {
+    name: 'Chris Taylor',
+    cost: 14,
+    year: 1
+  },
+  {
+    name: 'Steve Cishek',
+    cost: 18,
+    year: 1
   }
 
 ];
