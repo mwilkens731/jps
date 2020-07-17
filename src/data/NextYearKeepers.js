@@ -215,7 +215,7 @@ export default [
     year: 1
   },
   {
-    name: 'Brandon Woodruff',
+    name: 'Lance Lynn',
     cost: 25,
     year: 1
   },
