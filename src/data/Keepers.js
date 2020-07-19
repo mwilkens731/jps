@@ -2,387 +2,387 @@ export default [
   {
     name: 'Francisco Lindor',
     cost: 1,
-    year: 1
-  },
-  {
-    name: 'Eddie Rosario',
-    cost: 12,
     year: 2
   },
   {
+    name: 'Eddie Rosario',
+    cost: 11,
+    year: 3
+  },
+  {
     name: 'J.D. Davis',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Shohei Ohtani (Pitcher)',
-    cost: 15,
-    year: 1
+    cost: 14,
+    year: 2
   },
   {
     name: 'Frankie Montas',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Brandon Workman',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'A.J. Puk',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Anthony Rendon',
     cost: 1,
-    year: 2
+    year: 3
   },
   {
     name: 'Austin Meadows',
-    cost: 21,
-    year: 1
+    cost: 20,
+    year: 2
   },
   {
     name: 'J.T. Realmuto',
-    cost: 9,
-    year: 2
+    cost: 8,
+    year: 3
   },
   {
     name: 'DJ LeMahieu',
-    cost: 22,
-    year: 1
+    cost: 21,
+    year: 2
   },
   {
     name: 'Nelson Cruz',
-    cost: 5,
-    year: 1
+    cost: 4,
+    year: 2
   },
   {
     name: 'Vladimir Guerrero Jr.',
-    cost: 17,
-    year: 2
+    cost: 16,
+    year: 3
   },
   {
     name: 'Victor Robles',
-    cost: 16,
-    year: 2
+    cost: 15,
+    year: 3
   },
   {
     name: 'Eloy Jimenez',
-    cost: 18,
-    year: 2
+    cost: 17,
+    year: 3
   },
   {
     name: 'Yasmani Grandal',
-    cost: 24,
-    year: 2
+    cost: 23,
+    year: 3
   },
   {
     name: 'Didi Gregorius',
-    cost: 19,
-    year: 1
+    cost: 18,
+    year: 2
   },
   {
     name: 'Nick Senzel',
-    cost: 11,
-    year: 1
+    cost: 10,
+    year: 2
   },
   {
     name: 'Julio Urias',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Ketel Marte',
-    cost: 20,
-    year: 1
+    cost: 19,
+    year: 2
   },
   {
     name: 'Matt Chapman',
-    cost: 24,
-    year: 2
+    cost: 23,
+    year: 3
   },
   {
     name: 'Kyle Schwarber',
-    cost: 13,
-    year: 1
-  },
-  {
-    name: 'Jo Adell',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Shane Bieber',
-    cost: 7,
-    year: 1
-  },
-  {
-    name: 'Clayton Kershaw',
-    cost: 5,
-    year: 1
-  },
-  {
-    name: 'Josh Hader',
-    cost: 9,
+    cost: 12,
     year: 2
   },
   {
-    name: 'Pete Alonso',
-    cost: 16,
-    year: 1
-  },
-  {
-    name: 'Franmil Reyes',
-    cost: 18,
-    year: 1
-  },
-  {
-    name: 'Jorge Polanco',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Bryan Reynolds',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Cavan Biggio',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Jack Flaherty',
+    name: 'Jo Adell',
     cost: 24,
     year: 2
   },
   {
-    name: 'Chris Paddack',
-    cost: 15,
-    year: 1
-  },
-  {
-    name: 'Trevor Story',
-    cost: 1,
-    year: 1
-  },
-  {
-    name: 'Xander Bogaerts',
-    cost: 3,
-    year: 1
-  },
-  {
-    name: 'Jeff McNeil',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Yu Darvish',
-    cost: 7,
-    year: 1
-  },
-  {
-    name: 'Marcus Stroman',
-    cost: 18,
-    year: 1
-  },
-  {
-    name: 'Christian Yelich',
-    cost: 1,
-    year: 1
-  },
-  {
-    name: 'Marcus Semien',
-    cost: 23,
-    year: 2
-  },
-  {
-    name: 'Danny Santana',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Blake Snell',
-    cost: 11,
-    year: 2
-  },
-  {
-    name: 'Mike Clevinger',
-    cost: 4,
-    year: 1
-  },
-  {
-    name: 'Lance Lynn',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Zac Gallen',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Ronald Acuna Jr.',
+    name: 'Shane Bieber',
     cost: 6,
     year: 2
   },
   {
+    name: 'Clayton Kershaw',
+    cost: 4,
+    year: 2
+  },
+  {
+    name: 'Josh Hader',
+    cost: 8,
+    year: 3
+  },
+  {
+    name: 'Pete Alonso',
+    cost: 15,
+    year: 2
+  },
+  {
+    name: 'Franmil Reyes',
+    cost: 17,
+    year: 2
+  },
+  {
+    name: 'Jorge Polanco',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Bryan Reynolds',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Cavan Biggio',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Jack Flaherty',
+    cost: 23,
+    year: 3
+  },
+  {
+    name: 'Chris Paddack',
+    cost: 14,
+    year: 2
+  },
+  {
+    name: 'Trevor Story',
+    cost: 1,
+    year: 2
+  },
+  {
+    name: 'Xander Bogaerts',
+    cost: 2,
+    year: 2
+  },
+  {
+    name: 'Jeff McNeil',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Yu Darvish',
+    cost: 6,
+    year: 2
+  },
+  {
+    name: 'Marcus Stroman',
+    cost: 17,
+    year: 2
+  },
+  {
+    name: 'Christian Yelich',
+    cost: 1,
+    year: 2
+  },
+  {
+    name: 'Marcus Semien',
+    cost: 22,
+    year: 3
+  },
+  {
+    name: 'Danny Santana',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Blake Snell',
+    cost: 10,
+    year: 3
+  },
+  {
+    name: 'Mike Clevinger',
+    cost: 3,
+    year: 2
+  },
+  {
+    name: 'Lance Lynn',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Zac Gallen',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Ronald Acuna Jr.',
+    cost: 5,
+    year: 3
+  },
+  {
     name: 'Rafael Devers',
-    cost: 7,
-    year: 1
+    cost: 6,
+    year: 2
   },
   {
     name: 'Tim Anderson',
-    cost: 12,
-    year: 2
+    cost: 11,
+    year: 3
   },
   {
     name: 'Jorge Soler',
-    cost: 20,
-    year: 1
-  },
-  {
-    name: 'Kirby Yates',
-    cost: 24,
-    year: 2
-  },
-  {
-    name: 'Caleb Smith',
-    cost: 24,
-    year: 2
-  },
-  {
-    name: 'Dylan Cease',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Juan Soto',
-    cost: 24,
-    year: 2
-  },
-  {
-    name: 'Keston Hiura',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Bo Bichette',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Mitch Garver',
-    cost: 25,
-    year: 1
-  },
-  {
-    name: 'Walker Buehler',
     cost: 19,
     year: 2
   },
   {
+    name: 'Kirby Yates',
+    cost: 23,
+    year: 3
+  },
+  {
+    name: 'Caleb Smith',
+    cost: 23,
+    year: 3
+  },
+  {
+    name: 'Dylan Cease',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Juan Soto',
+    cost: 23,
+    year: 3
+  },
+  {
+    name: 'Keston Hiura',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Bo Bichette',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Mitch Garver',
+    cost: 24,
+    year: 2
+  },
+  {
+    name: 'Walker Buehler',
+    cost: 18,
+    year: 3
+  },
+  {
     name: 'Lucas Giolito',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Tyler Glasnow',
-    cost: 9,
-    year: 1
+    cost: 8,
+    year: 2
   },
   {
     name: 'Yordan Alvarez',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Luis Robert',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Eduardo Escobar',
-    cost: 14,
-    year: 1
+    cost: 13,
+    year: 2
   },
   {
     name: 'Patrick Corbin',
-    cost: 16,
-    year: 2
+    cost: 15,
+    year: 3
   },
   {
     name: 'Mike Soroka',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Max Fried',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Dakota Hudson',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Gavin Lux',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Gleyber Torres',
+    cost: 15,
+    year: 3
+  },
+  {
+    name: 'Jesus Luzardo',
     cost: 16,
     year: 2
   },
   {
-    name: 'Jesus Luzardo',
-    cost: 17,
-    year: 1
-  },
-  {
     name: 'Fernando Tatis Jr.',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Michael Kopech',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Dinelson Lamet',
-    cost: 25,
-    year: 1
+    cost: 24,
+    year: 2
   },
   {
     name: 'Salvador Perez',
-    cost: 24,
-    year: 1
+    cost: 23,
+    year: 2
   },
   {
     name: 'Stephen Strasburg',
-    cost: 3,
-    year: 1
+    cost: 2,
+    year: 2
   },
   {
     name: 'Charlie Morton',
-    cost: 12,
-    year: 1
+    cost: 11,
+    year: 2
   },
   {
     name: 'Chris Taylor',
-    cost: 14,
-    year: 1
+    cost: 13,
+    year: 2
   },
   {
     name: 'Steve Cishek',
-    cost: 18,
-    year: 1
+    cost: 17,
+    year: 2
   }
 
 ];
