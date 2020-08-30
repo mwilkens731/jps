@@ -340,7 +340,7 @@ export default [
     year: 3
   },
   {
-    name: 'Jesus Luzardo',
+    name: 'Jes\u00fas Luzardo',
     cost: 16,
     year: 2
   },
