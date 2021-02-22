@@ -3,10 +3,10 @@ export default {
   appId: 'mxfalV3c',
   clientId: 'dj0yJmk9WW9hSlNxcDllcUZwJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTU5',
   clientSecret: '4a1c4d6e5af02bfe69e226d666a5113a7b2b35a6',
-  corsAnywhereUrl: 'https://cors-anywhere.herokuapp.com/',
+  corsAnywhereUrl: 'https://cors.bridged.cc/',
   leagueKeys: {
-    lastYear: '388.l.74981',
-    thisYear: '398.l.5072'
+    lastYear: '398.l.5072',
+    thisYear: '404.l.8715'
   },
   lastYearTeamKeys: {
     1: '.t.1', //Pork
@@ -16,10 +16,10 @@ export default {
     5: '.t.5', //dubya
     6: '.t.6', //vasta
     7: '.t.7', //uribe
-    8: '.t.8', //joe
-    9: '.t.12', //shenanigans
-    10: '.t.9', //slump
-    11: '.t.10', //gary
-    12: '.t.11' //joe
+    8: '.t.8', //mojojojo
+    9: '.t.9', //shenanigans
+    10: '.t.10', //slump
+    11: '.t.11', //gary
+    12: '.t.12' //joe
   }
 };
