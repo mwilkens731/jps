@@ -223,12 +223,14 @@ class Loading extends Component {
     }
     return {
       playerKey: thisPlayer[0].player_key,
-      name: thisPlayer[2].name.ascii_first + ' ' + thisPlayer[2].name.ascii_last,
-      position: thisPlayer[displayPostionIndex].display_position
+      name: thisPlayer[2].name.full,
+      position: thisPlayer[displayPostionIndex].display_position,
+      playerId: thisPlayer[1].player_id
     };
   }
 
   enhancePlayer (player) {
+    console.log('player', player);
     let draftResult = this.state.draftResults.find(pick => pick.playerKey === player.playerKey);
     let draftRound = 26;
     if (draftResult) {
@@ -236,8 +238,8 @@ class Loading extends Component {
       draftResult.position = player.position;
       draftRound = draftResult.round;
     }
-    let keeper = Keepers.find(k => k.name === player.name);
-    player.nextYearKeeper = !!NextYearKeepers.find(k => k.name === player.name);
+    let keeper = Keepers.find(k => k.playerId === player.playerId);
+    player.nextYearKeeper = !!NextYearKeepers.find(k => k.playerId === player.playerId);
     if (keeper) {
       player.cost = keeper.cost;
       player.year = keeper.year;
@@ -254,7 +256,7 @@ class Loading extends Component {
     } else if (!this.state.teamsRetrieved) {
       return 'Retrieving Team List...';
     } else if (!this.state.draftResultsRetrieved) {
-      return 'Retrieving Draft Result...';
+      return 'Retrieving Draft Results...';
     } else if (!this.state.rostersRetrieved) {
       return `Retrieving Rosters...`;
     } else if (!this.state.rosterEnhancementStatus) {

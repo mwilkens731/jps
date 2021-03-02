@@ -2,387 +2,464 @@ export default [
   {
     name: 'Francisco Lindor',
     cost: 1,
-    year: 2
+    year: 2,
+    playerId: '9116'
   },
   {
     name: 'Eddie Rosario',
     cost: 11,
-    year: 3
+    year: 3,
+    playerId: '9591'
   },
   {
     name: 'J.D. Davis',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10186'
   },
   {
     name: 'Shohei Ohtani (Pitcher)',
     cost: 14,
-    year: 2
+    year: 2,
+    playerId: '1000002'
   },
   {
     name: 'Frankie Montas',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10027'
   },
   {
     name: 'Brandon Workman',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '9457'
   },
   {
     name: 'A.J. Puk',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10548'
   },
   {
     name: 'Anthony Rendon',
     cost: 1,
-    year: 3
+    year: 3,
+    playerId: '9106'
   },
   {
     name: 'Austin Meadows',
     cost: 20,
-    year: 2
+    year: 2,
+    playerId: '9612'
   },
   {
     name: 'J.T. Realmuto',
     cost: 8,
-    year: 3
+    year: 3,
+    playerId: '9718'
   },
   {
     name: 'DJ LeMahieu',
     cost: 21,
-    year: 2
+    year: 2,
+    playerId: '8949'
   },
   {
     name: 'Nelson Cruz',
     cost: 4,
-    year: 2
+    year: 2,
+    playerId: '7681'
   },
   {
     name: 'Vladimir Guerrero Jr.',
     cost: 16,
-    year: 3
+    year: 3,
+    playerId: '10621'
   },
   {
     name: 'Victor Robles',
     cost: 15,
-    year: 3
+    year: 3,
+    playerId: '10227'
   },
   {
     name: 'Eloy Jimenez',
     cost: 17,
-    year: 3
+    year: 3,
+    playerId: '10439'
   },
   {
     name: 'Yasmani Grandal',
     cost: 23,
-    year: 3
+    year: 3,
+    playerId: '9098'
   },
   {
     name: 'Didi Gregorius',
     cost: 18,
-    year: 2
+    year: 2,
+    playerId: '9282'
   },
   {
     name: 'Nick Senzel',
     cost: 10,
-    year: 2
+    year: 2,
+    playerId: '10453'
   },
   {
     name: 'Julio Urias',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '9585'
   },
   {
     name: 'Ketel Marte',
     cost: 19,
-    year: 2
+    year: 2,
+    playerId: '10036'
   },
   {
     name: 'Matt Chapman',
     cost: 23,
-    year: 3
+    year: 3,
+    playerId: '10205'
   },
   {
     name: 'Kyle Schwarber',
     cost: 12,
-    year: 2
+    year: 2,
+    playerId: '9861'
   },
   {
     name: 'Jo Adell',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10893'
   },
   {
     name: 'Shane Bieber',
     cost: 6,
-    year: 2
+    year: 2,
+    playerId: '10867'
   },
   {
     name: 'Clayton Kershaw',
     cost: 4,
-    year: 2
+    year: 2,
+    playerId: '8180'
   },
   {
     name: 'Josh Hader',
     cost: 8,
-    year: 3
+    year: 3,
+    playerId: '10131'
   },
   {
     name: 'Pete Alonso',
     cost: 15,
-    year: 2
+    year: 2,
+    playerId: '10918'
   },
   {
     name: 'Franmil Reyes',
     cost: 17,
-    year: 2
+    year: 2,
+    playerId: '11016'
   },
   {
     name: 'Jorge Polanco',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '9750'
   },
   {
     name: 'Bryan Reynolds',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10577'
   },
   {
     name: 'Cavan Biggio',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '11086'
   },
   {
     name: 'Jack Flaherty',
     cost: 23,
-    year: 3
+    year: 3,
+    playerId: '10592'
   },
   {
     name: 'Chris Paddack',
     cost: 14,
-    year: 2
+    year: 2,
+    playerId: '10575'
   },
   {
     name: 'Trevor Story',
     cost: 1,
-    year: 2
+    year: 2,
+    playerId: '9571'
   },
   {
     name: 'Xander Bogaerts',
     cost: 2,
-    year: 2
+    year: 2,
+    playerId: '9319'
   },
   {
     name: 'Jeff McNeil',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '11118'
   },
   {
     name: 'Yu Darvish',
     cost: 6,
-    year: 2
+    year: 2,
+    playerId: '9095'
   },
   {
     name: 'Marcus Stroman',
     cost: 17,
-    year: 2
+    year: 2,
+    playerId: '9637'
   },
   {
     name: 'Christian Yelich',
     cost: 1,
-    year: 2
+    year: 2,
+    playerId: '9320'
   },
   {
     name: 'Marcus Semien',
     cost: 22,
-    year: 3
+    year: 3,
+    playerId: '9517'
   },
   {
     name: 'Danny Santana',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '9693'
   },
   {
     name: 'Blake Snell',
     cost: 10,
-    year: 3
+    year: 3,
+    playerId: '10148'
   },
   {
     name: 'Mike Clevinger',
     cost: 3,
-    year: 2
+    year: 2,
+    playerId: '10296'
   },
   {
     name: 'Lance Lynn',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '8650'
   },
   {
     name: 'Zac Gallen',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '11116'
   },
   {
     name: 'Ronald Acuna Jr.',
     cost: 5,
-    year: 3
+    year: 3,
+    playerId: '10646'
   },
   {
     name: 'Rafael Devers',
     cost: 6,
-    year: 2
+    year: 2,
+    playerId: '10235'
   },
   {
     name: 'Tim Anderson',
     cost: 11,
-    year: 3
+    year: 3,
+    playerId: '9897'
   },
   {
     name: 'Jorge Soler',
     cost: 19,
-    year: 2
+    year: 2,
+    playerId: '9228'
   },
   {
     name: 'Kirby Yates',
     cost: 23,
-    year: 3
+    year: 3,
+    playerId: '9727'
   },
   {
     name: 'Caleb Smith',
     cost: 23,
-    year: 3
+    year: 3,
+    playerId: '10762'
   },
   {
     name: 'Dylan Cease',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10438'
   },
   {
     name: 'Juan Soto',
     cost: 23,
-    year: 3
+    year: 3,
+    playerId: '10626'
   },
   {
     name: 'Keston Hiura',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10912'
   },
   {
     name: 'Bo Bichette',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10766'
   },
   {
     name: 'Mitch Garver',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10789'
   },
   {
     name: 'Walker Buehler',
     cost: 18,
-    year: 3
+    year: 3,
+    playerId: '10509'
   },
   {
     name: 'Lucas Giolito',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '9640'
   },
   {
     name: 'Tyler Glasnow',
     cost: 8,
-    year: 2
+    year: 2,
+    playerId: '9616'
   },
   {
     name: 'Yordan Alvarez',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10883'
   },
   {
     name: 'Luis Robert',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10765'
   },
   {
     name: 'Eduardo Escobar',
     cost: 13,
-    year: 2
+    year: 2,
+    playerId: '9054'
   },
   {
     name: 'Patrick Corbin',
     cost: 15,
-    year: 3
+    year: 3,
+    playerId: '9168'
   },
   {
     name: 'Mike Soroka',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10423'
   },
   {
     name: 'Max Fried',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '9620'
   },
   {
     name: 'Dakota Hudson',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10598'
   },
   {
     name: 'Gavin Lux',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10511'
   },
   {
     name: 'Gleyber Torres',
     cost: 15,
-    year: 3
+    year: 3,
+    playerId: '10236'
   },
   {
     name: 'Jes\u00fas Luzardo',
     cost: 16,
-    year: 2
+    year: 2,
+    playerId: '10627'
   },
   {
     name: 'Fernando Tatis Jr.',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10639'
   },
   {
     name: 'Michael Kopech',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10412'
   },
   {
     name: 'Dinelson Lamet',
     cost: 24,
-    year: 2
+    year: 2,
+    playerId: '10703'
   },
   {
     name: 'Salvador Perez',
     cost: 23,
-    year: 2
+    year: 2,
+    playerId: '9015'
   },
   {
     name: 'Stephen Strasburg',
     cost: 2,
-    year: 2
+    year: 2,
+    playerId: '8562'
   },
   {
     name: 'Charlie Morton',
     cost: 11,
-    year: 2
+    year: 2,
+    playerId: '8270'
   },
   {
     name: 'Chris Taylor',
     cost: 13,
-    year: 2
+    year: 2,
+    playerId: '9771'
   },
   {
     name: 'Steve Cishek',
     cost: 17,
-    year: 2
+    year: 2,
+    playerId: '8836'
   }
 
 ];
