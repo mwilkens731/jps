@@ -1,388 +1,85 @@
 export default [
-  // {
-  //   name: 'Francisco Lindor',
-  //   cost: 1,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Eddie Rosario',
-  //   cost: 12,
-  //   year: 2
-  // },
-  // {
-  //   name: 'J.D. Davis',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Shohei Ohtani (Pitcher)',
-  //   cost: 15,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Frankie Montas',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Brandon Workman',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'A.J. Puk',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Anthony Rendon',
-  //   cost: 1,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Austin Meadows',
-  //   cost: 21,
-  //   year: 1
-  // },
-  // {
-  //   name: 'J.T. Realmuto',
-  //   cost: 9,
-  //   year: 2
-  // },
-  // {
-  //   name: 'DJ LeMahieu',
-  //   cost: 22,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Nelson Cruz',
-  //   cost: 5,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Vladimir Guerrero Jr.',
-  //   cost: 17,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Victor Robles',
-  //   cost: 16,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Eloy Jimenez',
-  //   cost: 18,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Yasmani Grandal',
-  //   cost: 24,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Didi Gregorius',
-  //   cost: 19,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Nick Senzel',
-  //   cost: 11,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Julio Urias',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Ketel Marte',
-  //   cost: 20,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Matt Chapman',
-  //   cost: 24,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Kyle Schwarber',
-  //   cost: 13,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Jo Adell',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Shane Bieber',
-  //   cost: 7,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Clayton Kershaw',
-  //   cost: 5,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Josh Hader',
-  //   cost: 9,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Pete Alonso',
-  //   cost: 16,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Franmil Reyes',
-  //   cost: 18,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Jorge Polanco',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Bryan Reynolds',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Cavan Biggio',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Jack Flaherty',
-  //   cost: 24,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Chris Paddack',
-  //   cost: 15,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Trevor Story',
-  //   cost: 1,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Xander Bogaerts',
-  //   cost: 3,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Jeff McNeil',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Yu Darvish',
-  //   cost: 7,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Marcus Stroman',
-  //   cost: 18,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Christian Yelich',
-  //   cost: 1,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Marcus Semien',
-  //   cost: 23,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Danny Santana',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Blake Snell',
-  //   cost: 11,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Mike Clevinger',
-  //   cost: 4,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Lance Lynn',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Zac Gallen',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Ronald Acuna Jr.',
-  //   cost: 6,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Rafael Devers',
-  //   cost: 7,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Tim Anderson',
-  //   cost: 12,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Jorge Soler',
-  //   cost: 20,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Kirby Yates',
-  //   cost: 24,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Caleb Smith',
-  //   cost: 24,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Dylan Cease',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Juan Soto',
-  //   cost: 24,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Keston Hiura',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Bo Bichette',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Mitch Garver',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Walker Buehler',
-  //   cost: 19,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Lucas Giolito',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Tyler Glasnow',
-  //   cost: 9,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Yordan Alvarez',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Luis Robert',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Eduardo Escobar',
-  //   cost: 14,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Patrick Corbin',
-  //   cost: 16,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Mike Soroka',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Max Fried',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Dakota Hudson',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Gavin Lux',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Gleyber Torres',
-  //   cost: 16,
-  //   year: 2
-  // },
-  // {
-  //   name: 'Jesus Luzardo',
-  //   cost: 17,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Fernando Tatis Jr.',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Michael Kopech',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Dinelson Lamet',
-  //   cost: 25,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Salvador Perez',
-  //   cost: 24,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Stephen Strasburg',
-  //   cost: 3,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Charlie Morton',
-  //   cost: 12,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Chris Taylor',
-  //   cost: 14,
-  //   year: 1
-  // },
-  // {
-  //   name: 'Steve Cishek',
-  //   cost: 18,
-  //   year: 1
-  // }
+  //pork
+  {  name: 'gurriel', cost: 9, year: 2, playerId: '10616' },
+  {  name: 'price', cost: 19, year: 2, playerId: '8175' },
+  {  name: 'Kopech', cost: 23, year: 3, playerId: '10412' },
+  {  name: 'montas', cost: 23, year: 3, playerId: '10027'},
+  {  name: 'burnes', cost: 26, year: 2, playerId: '10910'},
+  {  name: 'mountcastle', cost: 26, year: 2, playerId: '10429'},
+  {  name: 'santander', cost: 26, year: 2, playerId: '10666'},
+
+  //cleverness
+
+  //uribe
+  {  name: 'degrom', cost: 1, year: 2, playerId: '9701' },
+  {  name: 'paddack', cost: 13, year: 3, playerId: '10575' },
+  {  name: 'alonso', cost: 14, year: 3, playerId: '10918' },
+  {  name: 'verdugo', cost: 17, year: 2, playerId: '10505'},
+  {  name: 'biggio', cost: 23, year: 3, playerId: '11086'},
+  {  name: 'bassitt', cost: 26, year: 2, playerId: '9799'},
+  {  name: 'lopez', cost: 26, year: 2, playerId: '11057'},
+
+  //shenanigans
+  {  name: 'carlson', cost: 15, year: 2, playerId: '10643' },
+  {  name: 'karinchak', cost: 26, year: 2, playerId: '11632' },
+  {  name: 'lynn', cost: 23, year: 3, playerId: '8650' },
+  {  name: 'gallen', cost: 23, year: 3, playerId: '11116'},
+  {  name: 'happ', cost: 26, year: 2, playerId: '10440'},
+  {  name: 'lewis', cost: 26, year: 2, playerId: '10584'},
+  {  name: 'yastrzemski', cost: 26, year: 2, playerId: '10119'},
+
+  //pollocks
+  {  name: 'bryant', cost: 1, year: 2, playerId: '9558' },
+  {  name: 'albies', cost: 1, year: 2, playerId: '10237' },
+  {  name: 'chapman', cost: 2, year: 2, playerId: '8616' },
+  {  name: 'hendricks', cost: 4, year: 2, playerId: '9758'},
+  {  name: 'seager', cost: 5, year: 2, playerId: '9584'},
+  {  name: 'sale', cost: 18, year: 2, playerId: '8780'},
+  {  name: 'lemahieu', cost: 20, year: 3, playerId: '8949'},
+
+  //vasta
+  {  name: 'bellinger', cost: 1, year: 2, playerId: '10504' },
+  {  name: 'kershaw', cost: 3, year: 3, playerId: '8180' },
+  {  name: 'bieber', cost: 5, year: 3, playerId: '10867' },
+  {  name: 'bummer', cost: 21, year: 2, playerId: '10773'},
+  {  name: 'hosmer', cost: 26, year: 2, playerId: '8857'},
+  {  name: 'staumont', cost: 26, year: 2, playerId: '10492'},
+  {  name: 'grisham', cost: 26, year: 2, playerId: '10522'},
+
+  //mcshrinkynuts
+
+  //dubya
+  {  name: 'trout', cost: 1, year: 2, playerId: '8861' },
+  {  name: 'tucker', cost: 10, year: 2, playerId: '10480' },
+  {  name: 'Luzardo', cost: 15, year: 3, playerId: '10627' },
+  {  name: 'lamet', cost: 23, year: 3, playerId: '10703'},
+  {  name: 'perez', cost: 22, year: 3, playerId: '9015'},
+  {  name: 'tatis', cost: 23, year: 3, playerId: '10639'},
+  {  name: 'cronenworth', cost: 26, year: 2, playerId: '11692'},
+
+  //slump
+  {  name: 'cole', cost: 1, year: 2, playerId: '9121' },
+  {  name: 'woodruff', cost: 2, year: 2, playerId: '10730' },
+  {  name: 'devers', cost: 5, year: 3, playerId: '10235' },
+  {  name: 'soler', cost: 18, year: 3, playerId: '9228'},
+  {  name: 'cease', cost: 23, year: 3, playerId: '10438'},
+
+  //topes
+  {  name: 'glasnow', cost: 7, year: 3, playerId: '9616' },
+  {  name: 'voit', cost: 11, year: 2, playerId: '10745' },
+  {  name: 'giolito', cost: 23, year: 3, playerId: '9640' },
+  {  name: 'hiura', cost: 23, year: 3, playerId: '10912'},
+  {  name: 'bichette', cost: 23, year: 3, playerId: '10766'},
+  {  name: 'sixto', cost: 26, year: 2, playerId: '10932'},
+  {  name: 'dom smith', cost: 26, year: 2, playerId: '9595'},
+
+  //smalls
+  {  name: 'turner', cost: 1, year: 2, playerId: '10056' },
+  {  name: 'soroka', cost: 23, year: 3, playerId: '10423' },
+  {  name: 'fried', cost: 23, year: 3, playerId: '9620' },
+  {  name: 'robert', cost: 23, year: 3, playerId: '10765'},
+  {  name: 'williams', cost: 26, year: 2, playerId: '11628'},
+  {  name: 'plesac', cost: 26, year: 2, playerId: '11590'},
+  {  name: 'bohm', cost: 26, year: 2, playerId: '11365'}
 
 ];

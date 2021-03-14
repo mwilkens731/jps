@@ -232,7 +232,7 @@ class Loading extends Component {
   enhancePlayer (player) {
     console.log('player', player);
     let draftResult = this.state.draftResults.find(pick => pick.playerKey === player.playerKey);
-    let draftRound = 26;
+    let draftRound = 28;
     if (draftResult) {
       draftResult.name = player.name;
       draftResult.position = player.position;
