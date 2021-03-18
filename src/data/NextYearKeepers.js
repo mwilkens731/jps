@@ -47,10 +47,10 @@ export default [
   {  name: 'grisham', cost: 26, year: 2, playerId: '10522'},
 
   //mcshrinkynuts
-  {  name: 'didi', cost: 17, year: 3, playerId: '10773'},
-  {  name: 'franco', cost: 21, year: 2, playerId: '8857'},
-  {  name: 'urias', cost: 23, year: 3, playerId: '10492'},
-  {  name: 'rosenthal', cost: 26, year: 2, playerId: '10522'},
+  {  name: 'didi', cost: 17, year: 3, playerId: '9282'},
+  {  name: 'franco', cost: 21, year: 2, playerId: '11573'},
+  {  name: 'urias', cost: 23, year: 3, playerId: '9585'},
+  {  name: 'rosenthal', cost: 26, year: 2, playerId: '9240'},
 
   //dubya
   {  name: 'trout', cost: 1, year: 2, playerId: '8861' },
