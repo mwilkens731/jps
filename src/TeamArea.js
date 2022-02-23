@@ -4,6 +4,7 @@ import './App.css';
 import ReactSelect from 'react-select';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import AppData from './data/AppData';
 
 const keeperColumns = [
   {
@@ -95,7 +96,7 @@ class TeamArea extends Component {
           }
           {this.state.selected.label === 'Free Agents' &&
             <div className='col-12'>
-              <span className='font-italic'>**players not on this list or on a team cost a round 25 pick, and are year 1</span>
+              <span className='font-italic'>**players not on this list or on a team cost a round {AppData.roundsInDraft} pick, and are year 1</span>
             </div>
           }
         </div>

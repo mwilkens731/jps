@@ -128,6 +128,7 @@ class Loading extends Component {
 
   async getRosters (teams) {
     let commaSeparatedTeamKeys = '';
+    console.log('teams', teams)
     teams.forEach((team) => {
       if (commaSeparatedTeamKeys.length === 0) {
         commaSeparatedTeamKeys = (this.state.predraft ? team.lastYearTeamKey : team.teamKey);
@@ -232,7 +233,7 @@ class Loading extends Component {
   enhancePlayer (player) {
     console.log('player', player);
     let draftResult = this.state.draftResults.find(pick => pick.playerKey === player.playerKey);
-    let draftRound = 28;
+    let draftRound = AppData.roundsInDraft;
     if (draftResult) {
       draftResult.name = player.name;
       draftResult.position = player.position;
