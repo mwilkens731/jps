@@ -18,7 +18,8 @@ export default {
     7: '.t.9', //shenanigans
     8: '.t.10', //slump
     9: '.t.11', //gary
-    10: '.t.12' //joe
+    10: '.t.12', //joe
+    11: '.t.4' //lucas
   },
   roundsInDraft: 28
 };
