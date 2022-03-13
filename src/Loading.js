@@ -100,7 +100,7 @@ class Loading extends Component {
       teamsArray.push({
         name: thisTeam.team[0][2].name,
         teamKey: thisTeam.team[0][0].team_key,
-        lastYearTeamKey: AppData.leagueKeys.lastYear + AppData.lastYearTeamKeys[thisTeam.team[0][1].team_id],
+        lastYearTeamKey: AppData.lastYearTeamKeys[thisTeam.team[0][1].team_id] ? AppData.leagueKeys.lastYear + AppData.lastYearTeamKeys[thisTeam.team[0][1].team_id] : null,
         roster: []
       });
     }
@@ -131,18 +131,22 @@ class Loading extends Component {
     console.log('teams', teams)
     teams.forEach((team) => {
       if (commaSeparatedTeamKeys.length === 0) {
-        commaSeparatedTeamKeys = (this.state.predraft ? team.lastYearTeamKey : team.teamKey);
+        commaSeparatedTeamKeys = (this.state.predraft ? (team.lastYearTeamKey ? team.lastYearTeamKey : '') : team.teamKey);
       } else {
-        commaSeparatedTeamKeys += ',' + (this.state.predraft ? team.lastYearTeamKey : team.teamKey);
+        if (team.lastYearTeamKey) {
+            commaSeparatedTeamKeys += ',' + (this.state.predraft ? team.lastYearTeamKey : team.teamKey);
+        }
       }
     });
     let result = await axios.get(
       AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=' + commaSeparatedTeamKeys + '/roster' + (this.state.predraft ? '' : (';date=' + moment().day(8).format('YYYY-MM-DD').toString())) + '?format=json',
       this.getAxiosHeaders(this.state.accessToken));
     for (let i = 0; i < teams.length; i++) {
-      let thisRoster = result.data.fantasy_content.teams[i].team[1].roster[0].players;
-      for (let j = 0; j < thisRoster.count; j++) {
-        teams[i].roster.push(this.transformPlayer(thisRoster[j].player[0]));
+      if(result.data.fantasy_content.teams[i]) {
+        let thisRoster = result.data.fantasy_content.teams[i].team[1].roster[0].players;
+        for (let j = 0; j < thisRoster.count; j++) {
+          teams[i].roster.push(this.transformPlayer(thisRoster[j].player[0]));
+        }
       }
     }
     this.setState({
