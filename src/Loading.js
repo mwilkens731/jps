@@ -246,7 +246,7 @@ class Loading extends Component {
     let keeper = Keepers.find(k => k.playerId === player.playerId);
     player.nextYearKeeper = !!NextYearKeepers.find(k => k.playerId === player.playerId);
     if (keeper) {
-      player.cost = keeper.cost;
+      player.cost = keeper.cost < AppData.roundsInDraft ? keeper.cost : AppData.roundsInDraft;
       player.year = keeper.year;
     } else {
       player.cost = draftRound === 1 ? 1 : draftRound - 1;

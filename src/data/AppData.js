@@ -21,5 +21,5 @@ export default {
     10: '.t.12', //joe
     11: '.t.4' //lucas
   },
-  roundsInDraft: 28
+  roundsInDraft: 25
 };
