@@ -101,7 +101,7 @@ class TeamArea extends Component {
           }
         </div>
         {this.state.selected !== '' &&
-          <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={30}
+          <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={this.state.tableData.length}
             getTrProps={(state, rowInfo, column) => {
               if (rowInfo) {
                 return {
