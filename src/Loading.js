@@ -237,11 +237,11 @@ class Loading extends Component {
   enhancePlayer (player) {
     console.log('player', player);
     let draftResult = this.state.draftResults.find(pick => pick.playerKey === player.playerKey);
-    let draftRound = AppData.roundsInDraft;
+    let draftRound = AppData.roundsInDraft + 1;
     if (draftResult) {
       draftResult.name = player.name;
       draftResult.position = player.position;
-      draftRound = draftResult.round + 1;
+      draftRound = draftResult.round;
     }
     let keeper = Keepers.find(k => k.playerId === player.playerId);
     player.nextYearKeeper = !!NextYearKeepers.find(k => k.playerId === player.playerId);
