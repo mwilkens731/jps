@@ -241,7 +241,7 @@ class Loading extends Component {
     if (draftResult) {
       draftResult.name = player.name;
       draftResult.position = player.position;
-      draftRound = draftResult.round;
+      draftRound = draftResult.round + 1;
     }
     let keeper = Keepers.find(k => k.playerId === player.playerId);
     player.nextYearKeeper = !!NextYearKeepers.find(k => k.playerId === player.playerId);
