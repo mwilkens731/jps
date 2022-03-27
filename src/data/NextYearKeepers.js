@@ -13,6 +13,13 @@ export default [
   //josh
 
   //uribe
+  {  name: 'cron', cost: 16, year: 1, playerId: '9583' },
+  {  name: 'rogers', cost: 25, year: 1, playerId: '10909' },
+  {  name: 'treinan', cost: 25, year: 1, playerId: '9672' },
+  {  name: 'alcantara', cost: 10, year: 1, playerId: '10597'},
+  {  name: 'buehler', cost: 1, year: 1, playerId: '10509'},
+  {  name: 'india', cost: 25, year: 1, playerId: '11292'},
+  {  name: 'cronenworth', cost: 25, year: 2, playerId: '11692'},
 
   //shenanigans
   {  name: 'mullins', cost: 25, year: 1, playerId: '10849' },
