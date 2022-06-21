@@ -133,11 +133,10 @@ class Loading extends Component {
       if (commaSeparatedTeamKeys.length === 0) {
         commaSeparatedTeamKeys = (this.state.predraft ? (team.lastYearTeamKey ? team.lastYearTeamKey : '') : team.teamKey);
       } else {
-        if (team.lastYearTeamKey) {
-            commaSeparatedTeamKeys += ',' + (this.state.predraft ? team.lastYearTeamKey : team.teamKey);
-        }
+            commaSeparatedTeamKeys += ',' + (this.state.predraft ? (team.lastYearTeamKey ? team.lastYearTeamKey : '') : team.teamKey);
       }
     });
+    console.log('comma separated team keys', commaSeparatedTeamKeys);
     let result = await axios.get(
       AppData.corsAnywhereUrl + 'https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=' + commaSeparatedTeamKeys + '/roster' + (this.state.predraft ? '' : (';date=' + moment().day(8).format('YYYY-MM-DD').toString())) + '?format=json',
       this.getAxiosHeaders(this.state.accessToken));
@@ -222,7 +221,7 @@ class Loading extends Component {
       if (!thisPlayer[9].display_position) {
         displayPostionIndex++;
         if (!thisPlayer[10].display_position) {
-          console.log('undefined player position for ', thisPlayer);
+          // console.log('undefined player position for ', thisPlayer);
         }
       }
     }
@@ -235,7 +234,6 @@ class Loading extends Component {
   }
 
   enhancePlayer (player) {
-    console.log('player', player);
     let draftResult = this.state.draftResults.find(pick => pick.playerKey === player.playerKey);
     let draftRound = AppData.roundsInDraft + 1;
     if (draftResult) {
