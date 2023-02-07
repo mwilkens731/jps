@@ -7,7 +7,7 @@
     "axios": "^0.21.2",
     "bootstrap": "^4.3.1",
     "moment": "^2.29.4",
-    "oauth": "^0.9.15",
+    "oauth": "^0.10.0",
     "prop-types": "15.6.2",
     "query-string": "^6.3.0",
     "react": "^16.8.4",
