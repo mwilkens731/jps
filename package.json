@@ -2,7 +2,7 @@
   "name": "jps",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mwilkens731.github.io/jps",
+  "homepage": "https://jps.onrender.com",
   "dependencies": {
     "axios": "^0.21.2",
     "bootstrap": "^4.3.1",
