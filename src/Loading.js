@@ -28,7 +28,7 @@ class Loading extends Component {
     this.state = {
       oauth: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token'),
       oauthWithProxy: new OAuth.OAuth2(AppData.clientId, AppData.clientSecret, AppData.corsAnywhereUrl + 'https://api.login.yahoo.com/', 'oauth2/request_auth', 'oauth2/get_token'),
-      redirectUri: window.location.host.indexOf('localhost') >= 0 ? 'oob' : 'https://jps.onrender.com/',
+      redirectUri: window.location.host.indexOf('localhost') >= 0 ? 'oob' : 'https://jps.onrender.com',
       authenticated: false,
       teamsRetrieved: false,
       draftResultsRetrieved: false,
