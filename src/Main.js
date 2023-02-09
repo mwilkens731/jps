@@ -37,7 +37,7 @@ class Main extends Component {
               <h5>We've moved!</h5>
             </div>
             <div className='col-12 offset-4'>
-              <p>New Site is located at <a href='https://jps.onrender.com'>https://jps.onrender.com</a></p>
+              <p>New Site is located at <a href='https://jps.onrender.com'>jps.onrender.com</a></p>
             </div>
 
       </div>
