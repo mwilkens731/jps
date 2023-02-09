@@ -33,10 +33,10 @@ class Main extends Component {
           <h1 className='col-12 jumbotron text-center'>We've Moved!</h1>
         </div>
           <div className='row'>
-            <div className='col-12 offset-5'>
+            <div className='col-12'>
               <h5>We've moved!</h5>
             </div>
-            <div className='col-12 offset-4'>
+            <div className='col-12'>
               <p>New Site is located at <a href='https://jps.onrender.com'>jps.onrender.com</a></p>
             </div>
         </div>
