@@ -30,23 +30,16 @@ class Main extends Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <h1 className='col-12 jumbotron text-center'>Juan Pierre Sucks Keeper Costs</h1>
+          <h1 className='col-12 jumbotron text-center'>We've Moved!</h1>
         </div>
-        {!this.state.loadingComplete &&
-          <Loading saveLoadingResults={this.saveLoadingResults}/>
-        }
-        {this.state.loadingComplete &&
           <div className='row'>
-            <div className='col-12 col-md-6'>
-              <h5>Select Team</h5>
-              <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
+            <div className='col-12 offset-5'>
+              <h5>We've moved!</h5>
             </div>
-            <div className='col-12 col-md-6'>
-              <h5>Select Team</h5>
-              <TeamArea freeAgents={this.state.freeAgents} teams={this.state.teams} predraft={this.state.predraft} />
+            <div className='col-12 offset-4'>
+              <p>New Site is located at <a href='https://jps.onrender.com'>https://jps.onrender.com</a></p>
             </div>
-          </div>
-        }
+
       </div>
     );
   }
