@@ -55,7 +55,7 @@ export default [
 
   //slump
   {  name: 'tucker', cost: 1, year: 1, playerId: '10480' },
-  {  name: 'fried', cost: 3, year: 3, playerId: '9620' },
+  {  name: 'fried', cost: 3, year: 1, playerId: '9620' },
   {  name: 'walker', cost: 10, year: 1, playerId: '12024' },
   {  name: 'valdez', cost: 5, year: 2, playerId: '11138'},
   {  name: 'morel', cost: 24, year: 2, playerId: '11743'},
