@@ -5,8 +5,8 @@ export default {
   clientSecret: '4a1c4d6e5af02bfe69e226d666a5113a7b2b35a6',
   corsAnywhereUrl: 'https://cors-anywhere-jps.onrender.com/',
   leagueKeys: {
-    lastYear: '422.l.22971',
-    thisYear: '431.l.40159'
+    lastYear: '431.l.40159',
+    thisYear: '458.l.5768'
   },
   lastYearTeamKeys: {
     1: '.t.1', //Pork

@@ -215,15 +215,9 @@ class Loading extends Component {
   }
 
   transformPlayer (thisPlayer) {
-    let displayPostionIndex = 8;
-    if (!thisPlayer[8].display_position) {
+    let displayPostionIndex = 11;
+    while (thisPlayer[displayPostionIndex] && !thisPlayer[displayPostionIndex].display_position){
       displayPostionIndex++;
-      if (!thisPlayer[9].display_position) {
-        displayPostionIndex++;
-        if (!thisPlayer[10].display_position) {
-          // console.log('undefined player position for ', thisPlayer);
-        }
-      }
     }
     return {
       playerKey: thisPlayer[0].player_key,

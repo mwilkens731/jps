@@ -56,7 +56,8 @@ class TeamArea extends Component {
     this.state = {
       selected: '',
       dropdownOptions: this.deriveOptions(),
-      tableData: []
+      tableData: [],
+      numRows: 0
     };
   }
 
@@ -75,7 +76,8 @@ class TeamArea extends Component {
   handleChange (e) {
     this.setState({
       selected: e,
-      tableData: e.value === this.props.teams.length ? this.props.freeAgents : this.props.teams[e.value].roster
+      tableData: e.value === this.props.teams.length ? this.props.freeAgents : this.props.teams[e.value].roster,
+      numRows: e.value === this.props.teams.length ? 25 : this.props.teams[e.value].roster.length
     });
   }
 
@@ -101,7 +103,7 @@ class TeamArea extends Component {
           }
         </div>
         {this.state.selected !== '' &&
-          <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={this.state.tableData.length}
+          <ReactTable className='text-center -striped -highlight' filterable defaultSorted={[{id: 'cost'}]} data={this.state.tableData} columns={keeperColumns} defaultPageSize={this.state.numRows}
             getTrProps={(state, rowInfo, column) => {
               if (rowInfo) {
                 return {
